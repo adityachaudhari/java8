@@ -4,6 +4,7 @@ public class LambdaExpressionVsAnonymousInnerClass {
 
     public static void main(String[] args) {
 
+        // anonymous inner class
         Runnable runnableAnonymous = new Runnable() {
             @Override
             public void run() {
@@ -11,6 +12,7 @@ public class LambdaExpressionVsAnonymousInnerClass {
             }
         };
 
+        // lambda expression
         Runnable runnableLamdba = () -> {
           System.out.println("From lamdba expression");
         };
