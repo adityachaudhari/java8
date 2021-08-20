@@ -1,4 +1,4 @@
-package com.java8.collections;
+package com.java8.businessdataobjects;
 import java.util.*;
 
 public class Dish {
