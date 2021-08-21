@@ -54,18 +54,18 @@ public class ComparatorBeforeAndWithJava8 {
         studentList.forEach(student -> System.out.print(student.getAge()+ " "));
 
 
-        System.out.println("\n************ Sorting roll number with anonymouys inner class  ************ \n");
+        System.out.println("\n************ Sorting roll number with java 8 comparator  ************ \n");
         System.out.println("Before sorting roll no with java 8 lambda \n");
         studentList.forEach(student -> System.out.print(student.getRollno()+ " "));
 
         // with java 8 lambda
-        /*Comparator<Student> compareByRollNumber = (Student stu1, Student stu2) -> stu1.getRollno().compareTo(stu2.getRollno());
-        Collections.sort(studentList, compareByRollNumber);*/
+        Comparator<Student> compareByRollNumber = (Student stu1, Student stu2) -> stu1.getRollno().compareTo(stu2.getRollno());
+        Collections.sort(studentList, compareByRollNumber);
 
-        // with java 8 comparing method
-        studentList.sort(Comparator.comparing(Student::getRollno));
+        // with java 8 comparing method using method reference
+        //studentList.sort(Comparator.comparing(Student::getRollno));
 
-        System.out.println("\nAfter sorting roll no with java 8 lambda \n");
+        System.out.println("\nAfter sorting roll no with java 8 lambda");
         studentList.forEach(student -> System.out.print(student.getRollno()+ " "));
 
 
