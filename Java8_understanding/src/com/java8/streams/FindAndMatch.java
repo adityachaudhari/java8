@@ -14,6 +14,6 @@ public class FindAndMatch {
         boolean isHealthy2 = Dish.menu.stream().noneMatch(dish -> dish.getCalories() >=1000);
         System.out.println("is dishes healthy 2"+isHealthy2);
 
-        
+
     }
 }
