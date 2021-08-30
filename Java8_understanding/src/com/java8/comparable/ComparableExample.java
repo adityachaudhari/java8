@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ComparableBeforeAndWithJava8 {
+public class ComparableExample {
 
     public static void main(String args[]) {
         Employee e1= new Employee("John",28);
@@ -23,8 +23,6 @@ public class ComparableBeforeAndWithJava8 {
         employeeList.add(e5);
 
         Collections.sort(employeeList);
-
-       // Collections.sor
 
         for (Employee emp : employeeList) {
             System.out.print(emp.getAge()+ " ");

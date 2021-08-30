@@ -27,14 +27,12 @@ public class ComparatorBeforeAndWithJava8 {
         studentList.add(s5);
         studentList.add(s6);
 
-        System.out.println("************ Sorting by name usingtraditional java withour anonymous and java 8  ************ \n");
+        System.out.println("************ Sorting by name using traditional java without anonymous and java 8  ************ \n");
         System.out.println("Before sorting by name :");
         studentList.forEach(student -> System.out.print(student.getName()+ " "));
-        Collections.sort(studentList, new StudentNameComparator());
 
-
-        Collections.sort(studentList, new StudentNameComparator());
         System.out.println("\n \n After sorting by name :");
+        Collections.sort(studentList, new StudentNameComparator());
         studentList.forEach(student -> System.out.print(student.getName()+ " "));
 
 
@@ -43,14 +41,14 @@ public class ComparatorBeforeAndWithJava8 {
         System.out.println("Before sorting by age :");
         studentList.forEach(student -> System.out.print(student.getAge()+ " "));
 
+
+        System.out.println("\nAfter sorting by age :");
         Collections.sort(studentList, new Comparator<Student>() {
             @Override
             public int compare(Student student1, Student student2) {
                 return student1.getAge().compareTo(student2.getAge());
             }
         });
-
-        System.out.println("\nAfter sorting by age :");
         studentList.forEach(student -> System.out.print(student.getAge()+ " "));
 
 
@@ -62,6 +60,7 @@ public class ComparatorBeforeAndWithJava8 {
         Comparator<Student> compareByRollNumber = (Student stu1, Student stu2) -> stu1.getRollno().compareTo(stu2.getRollno());
         Collections.sort(studentList, compareByRollNumber);
 
+        // Collections.sort(studentList, (Student stu1, Student stu2) -> stu1.getRollno().compareTo(stu2.getRollno())); can be done with this as well.
         // with java 8 comparing method using method reference
         //studentList.sort(Comparator.comparing(Student::getRollno));
 
